@@ -1,0 +1,15 @@
+mutation UpdateProfileMutation($goals: GoalsInput!) {
+	update_user(goals: $goals) {
+		id
+		goals {
+			jobs {
+				id
+				name
+			}
+			organizations {
+				id
+				name
+			}
+		}
+	}
+}

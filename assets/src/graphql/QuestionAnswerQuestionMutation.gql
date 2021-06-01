@@ -1,0 +1,35 @@
+mutation answerQuestion(
+	$id: Int!
+	$type: String!
+	$question_id: ID!
+	$question_alternative_id: ID
+) {
+	answer_question(
+		id: $id
+		type: $type
+		question_id: $question_id
+		question_alternative_id: $question_alternative_id
+	) {
+		question {
+			id
+			response {
+				id
+				question_id
+				question_alternative {
+					id
+					correct
+				}
+			}
+		}
+		exam_session {
+			id
+			responses_count
+		}
+		training {
+			id
+			responses_count
+			questions_count
+		}
+		show_trial_invitation
+	}
+}

@@ -1,0 +1,10 @@
+query Exam($search_text: String, $size: Int) {
+	userSessions(search_text: $search_text, size: $size) {
+		trainings {
+			id
+			name
+			responses_count
+			questions_count
+		}
+	}
+}

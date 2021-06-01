@@ -1,0 +1,7 @@
+<p>Olá, <%= @user.name %></p>
+<p>Sua conta na <strong>plataforma de questões</strong> da Folha Dirigida Online foi criada com sucesso!
+  Clique no link abaixo para acessar a plataforma e começar a estudar:</p>
+  <a href="https://questoes.folhadirigida.com.br">questoes.folhadirigida.com.br</a>
+<p>Não esqueça de salvar o link nos favoritos para acessar depois.E se quiser falar conosco, é só escrever para <a href="mailto:relacionamento@folhadirigida.com.br">relacionamento@folhadirigida.com.br</a>.</p>
+<p>Bons estudos!</p>
+<p>Equipe Folha Dirigida Online</p>

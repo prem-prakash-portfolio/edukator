@@ -1,0 +1,54 @@
+query getQuestion($id: Int!, $type: String!, $position: Int!) {
+	question(id: $id, type: $type, position: $position) {
+		id
+		position
+		content
+		outdated
+		cancelled
+		question_alternatives {
+			id
+			letter
+			content
+			correct
+		}
+		exams {
+			author {
+				name
+			}
+			job {
+				name
+			}
+			organization {
+				name
+			}
+			year
+			educational_level
+		}
+		tags {
+			subjects {
+				name
+			}
+			disciplines {
+				name
+			}
+			videos {
+				name
+			}
+		}
+		response {
+			id
+			question_id
+			question_alternative {
+				id
+				correct
+			}
+		}
+		comment {
+			content
+			teacher {
+				name
+				email
+			}
+		}
+	}
+}

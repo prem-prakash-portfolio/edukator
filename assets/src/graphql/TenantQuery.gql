@@ -1,0 +1,7 @@
+query {
+	tenant {
+		logo_url
+		name
+		support_email_address
+	}
+}

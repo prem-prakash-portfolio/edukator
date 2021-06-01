@@ -1,0 +1,9 @@
+query CurrentUser {
+	current_user {
+		viewed_tours {
+			menu
+			search
+			new_training
+		}
+	}
+}

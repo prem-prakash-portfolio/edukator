@@ -1,0 +1,17 @@
+query {
+	current_user {
+		id
+		name
+		email
+		goals {
+			jobs {
+				id
+				name
+			}
+			organizations {
+				id
+				name
+			}
+		}
+	}
+}

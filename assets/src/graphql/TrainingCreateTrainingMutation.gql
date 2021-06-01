@@ -1,0 +1,8 @@
+mutation createTraining($filters: FiltersInput, $size: Int, $name: String) {
+	create_training(filters: $filters, size: $size, name: $name) {
+		id
+		name
+		responses_count
+		questions_count
+	}
+}

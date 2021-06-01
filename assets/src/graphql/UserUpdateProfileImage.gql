@@ -1,0 +1,6 @@
+mutation UpdateProfileImageMutation($profile_image_data: ProfileImageData!) {
+	update_user(profile_image_data: $profile_image_data) {
+		id
+		profile_image_url
+	}
+}

@@ -1,0 +1,29 @@
+query QuestionFilter($filters: FiltersInput) {
+	question_filter(filters: $filters) {
+		total_questions
+		organizations {
+			id
+			name
+		}
+		authors {
+			id
+			name
+		}
+		disciplines {
+			id
+			name
+		}
+		subjects {
+			id
+			name
+		}
+		years {
+			id
+			name
+		}
+		educational_levels {
+			id
+			name
+		}
+	}
+}

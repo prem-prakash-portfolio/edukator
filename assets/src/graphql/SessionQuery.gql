@@ -1,0 +1,40 @@
+query session($id: Int!, $type: String!) {
+	session(id: $id, type: $type) {
+		questions {
+			id
+			position
+			response {
+				id
+				question_alternative {
+					id
+					correct
+				}
+			}
+		}
+		exam_session {
+			id
+			responses_count
+
+			exam {
+				id
+				name
+				exam_questions_count
+				author {
+					name
+				}
+				job {
+					name
+				}
+				organization {
+					name
+				}
+			}
+		}
+		training {
+			id
+			name
+			questions_count
+			responses_count
+		}
+	}
+}

@@ -1,0 +1,9 @@
+mutation StartExamSession($exam_id: ID!) {
+	create_exam_session(exam_id: $exam_id) {
+		id
+		exam_sessions {
+			id
+			responses_count
+		}
+	}
+}

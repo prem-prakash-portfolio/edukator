@@ -1,0 +1,9 @@
+mutation FinishTour($viewed_tours: ViewedToursInput!) {
+	update_user(viewed_tours: $viewed_tours) {
+		viewed_tours {
+			menu
+			search
+			new_training
+		}
+	}
+}

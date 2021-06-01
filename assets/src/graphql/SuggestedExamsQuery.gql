@@ -1,0 +1,31 @@
+query SuggestedExams {
+	current_user {
+		id
+		name
+		email
+		goals {
+			jobs {
+				id
+				name
+			}
+			organizations {
+				id
+				name
+			}
+		}
+		suggested_exams {
+			id
+			name
+			exam_questions_count
+			author {
+				name
+			}
+			job {
+				name
+			}
+			organization {
+				name
+			}
+		}
+	}
+}

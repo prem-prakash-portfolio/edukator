@@ -1,0 +1,12 @@
+query {
+	organizations_and_jobs {
+		organizations {
+			id
+			name
+		}
+		jobs {
+			id
+			name
+		}
+	}
+}

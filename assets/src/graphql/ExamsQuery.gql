@@ -1,0 +1,35 @@
+query Exam(
+	$type: ExamType!
+	$search_text: String
+	$cursor_after: String
+	$size: Int
+) {
+	examsPage(
+		type: $type
+		search_text: $search_text
+		cursor_after: $cursor_after
+		size: $size
+	) {
+		exams {
+			id
+			name
+			exam_questions_count
+			exam_sessions {
+				id
+				responses_count
+			}
+			author {
+				name
+			}
+			job {
+				name
+			}
+			organization {
+				name
+			}
+		}
+		has_more
+		cursor_after
+		total_count
+	}
+}

@@ -1,0 +1,26 @@
+verify_signatures: false
+PreCommit:
+  Credo:
+    enabled: true
+
+  CompileCheck:
+    enabled: true
+    include:
+      - "lib/**/*.ex"
+      - "lib/**/*.exs"
+    command: ["mix", "do", "clean,", "compile"]
+
+  FormatElixirCheck:
+    enabled: true
+    include:
+      - "lib/**/*.ex"
+      - "lib/**/*.exs"
+    command: ["mix", "format", "--check-formatted"]
+
+  EsLint:
+    enabled: true
+    required_executable: "assets/node_modules/.bin/eslint"
+    include:
+      - "assets/**/*.js"
+      - "assets/**/*.vue"
+    command: ["assets/node_modules/.bin/eslint", "--ext", ".js,.vue", "assets/src"]

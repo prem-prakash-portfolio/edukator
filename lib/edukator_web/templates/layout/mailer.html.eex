@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"/>
+    <title><%= @email.subject %></title>
+  </head>
+  <body>
+    <!-- <div class="header">
+      <%= img_tag(@logo_url, alt: "Logo", title: "Logo", style: "display:block", width: "300", height: "62") %>
+    </div> -->
+    <div class="content">
+      <%= render @view_module, @view_template, assigns %>
+    </div>
+  </body>
+</html>

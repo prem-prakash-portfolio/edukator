@@ -1,0 +1,5 @@
+mutation DeleteExamSession($id: Int!) {
+	delete_exam_session(id: $id) {
+		id
+	}
+}

@@ -1,0 +1,6 @@
+query CurrentUser {
+	current_user {
+		id
+		account_type
+	}
+}

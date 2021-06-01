@@ -1,0 +1,52 @@
+query result($id: Int!, $type: String!) {
+	result(id: $id, type: $type) {
+		training {
+			id
+			name
+			questions_count
+		}
+		exam_session {
+			id
+			exam {
+				id
+				name
+				exam_questions_count
+				author {
+					name
+				}
+				job {
+					name
+				}
+				organization {
+					name
+				}
+			}
+		}
+		sessions_data {
+			mean_percentage_correct
+			finished_sessions_count
+		}
+		questions {
+			id
+			position
+			response {
+				id
+				question_alternative {
+					id
+					correct
+				}
+			}
+			tags {
+				videos {
+					name
+				}
+				subjects {
+					name
+				}
+				disciplines {
+					name
+				}
+			}
+		}
+	}
+}
